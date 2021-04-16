@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>float/clear</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<style>
+    /* 
+    float : 선택한 요소를 왼쪽부터 오른쪽으로 순서대로 배치하는 CSS 
+      속성 : left, right 두개 씀, 가운데 정렬 X
+    */
+    /* div 로 기본 박스 설정 후 .box 1~4 로 여러개의 박스를 만든다. */
+    div{
+        width:150px;
+        height:150px;
+        border:1px solid black;
+        float:none;
+    }
+    .box1{background-color: blue;}
+    .box2{background-color: purple;}
+    .box3{background-color: green;}
+    .box4{background-color: yellow;}
+</style>
+<body>
+    <!--
+        div box 4개 작성
+        가로세로 길이, 테두리, 배경 색상은 전부 다르게
+    -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    
+</body>
+</html>

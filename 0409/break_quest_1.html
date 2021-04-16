@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        /*
+             xy + yx = 99
+             x : 1, y : 8 --> 99 
+             x : 
+        */
+        for (x = 0; x < 10; x++) {//x는 0부터 10보다 작을때까지
+            for (y = 0; y < 10; y++) {//y는 0부터 10보다 작을때까지
+                if (x * 10 + y + y * 10 + x == 99) {//만약 xy + yx = 99 면 
+                    document.write("x:", x, ", y: ", y, "<br>"); //x:x 값 y:y 값 으로 출력하겠다.
+                    break; // 감싸고 있는 반복문을 종료
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

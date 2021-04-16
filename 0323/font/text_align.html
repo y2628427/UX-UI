@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 정렬</title>
+    <style>
+        /*
+        text-align은 자식 요소의 inline 태그와 텍스트를 정렬
+        */
+        .center{text-align: center;}
+        .right{text-align: right;}
+        .left{text-align: left;}
+        .justify{
+            text-align: justify;
+        }
+        th, td{
+            border : 1px solid black;
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th class="left">제목</th>
+                <th>작성자</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            <tr>
+                <td>1</td>
+                <td class="center">대법원장과 대법관이 아닌 법관의 임기는 10년으로 하며, 법률이 정하는 바에 의하여 연임할 수 있다.</td>
+                <td>오달제</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>국가는 균형있는 국민경제의 성장 및 안정과 적정한 소득의 분배를 유지하고, 시장의 지배와 경제력의 남용을 방지하며, 경제주체간의 조화를 통한 경제의 민주화를 위하여 경제에 관한
+                    규제와 조정을 할 수 있다.</td>
+                <td>윤동주</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>누구든지 체포 또는 구속을 당한 때에는 즉시 변호인의 조력을 받을 권리를 가진다. 다만, 형사피고인이 스스로 변호인을 구할 수 없을 때에는 법률이 정하는 바에 의하여 국가가
+                    변호인을 붙인다.</td>
+                <td>정약용</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td class="right">모든 국민은 자기의 행위가 아닌 친족의 행위로 인하여 불이익한 처우를 받지 아니한다.</td>
+                <td>윤집</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td class="justify">탄핵소추의 의결을 받은 자는 탄핵심판이 있을 때까지 그 권한행사가 정지된다.</td>
+                <td>하위지</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>

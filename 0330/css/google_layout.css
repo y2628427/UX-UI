@@ -1,0 +1,166 @@
+
+<!--css파일을 읽어준다.-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a:link,
+        a:visited {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 0px;
+            display: inline-block;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        nav {
+            text-align: right;
+        }
+
+        nav ul {
+            padding: 15px;
+            display: inline-block;
+        }
+
+        nav li {
+            display: inline-block;
+            padding-left: 20px;
+            font-size: 0px;
+
+        }
+
+        a>img {
+            width: 16px;
+        }
+
+        .app {
+            padding: 16px !important;
+        }
+
+        .app:hover {
+            background-color: #a7a1a1;
+            border-radius: 32px;
+        }
+
+        .login:link,
+        .login:visited {
+            width: 96px;
+            /* height: 36px; */
+            padding: 8px 0px;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;
+            display: inline-block;
+            background-color: #4574bb;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .login:hover {
+            text-decoration: none;
+            box-shadow: 0px 0px 3px #2e86f8;
+        }
+
+
+
+        section {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+
+        section input {
+            height: 44px;
+            width: 400px;
+            font-size: 20px;
+            padding-left: 50px;
+            background-image: url('/img/search.png');
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            background-size: 32px;
+            border-style: none;
+            outline: none;
+            /* 
+            탭이나 focus 효과가 들어갔을 때 표시되는 테두리 해제 
+            사용밥법 및 속성값이 border와 동일하다.
+            선두께 선종류 선색상
+            outline-width, outline-style, outline-color
+            */
+        }
+
+        form {
+            border: 1px solid gray;
+            border-radius: 22px;
+            display: inline-block;
+            padding: 0px 20px;
+        }
+
+        form>* {
+            float: left;
+        }
+
+        form a {
+            display: inline-block;
+            height: 32px;
+            padding: 8px 0px;
+            margin-left: 10px;
+
+        }
+
+        form a>img {
+            width: 32px
+        }
+
+        article div {
+            clear: both;
+            text-align: center;
+            margin-top:20px;
+        }
+
+        article button {
+            padding: 0px 20px;
+            height: 32px;
+            margin-right: 5px;
+            border: none; /* 테두리 없앰 */
+            border-radius: 5px;
+        }
+
+        footer {
+            position: absolute;
+            width:100%;
+            bottom: 0px; /* 하단에 붙임 */
+            clear: both;
+            background-color:#e8e8e8;
+            color:gray;
+        }
+        footer > p,footer > div {
+            padding:10px 20px;
+            height:32px;
+        }
+        footer ul:first-child{
+            float:left;
+            width:650px;
+        }
+        footer ul:last-child{
+            width:550px;
+            float:right;
+            text-align: right;
+        }
+        footer li{
+            display: inline-block;
+            margin-right: 50px;
+        }
+        footer a:link, footer a:visited{
+            color:gray;
+
+        }

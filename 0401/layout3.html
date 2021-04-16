@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>레이아웃</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .left_menu {
+            width: 60px;
+            height: 1040px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            text-align: center;
+            position: fixed;
+            /* 스크롤 내려도 고정 */
+            left: 0px;
+            top: 0px;
+            background-color: rgb(179, 175, 175);
+        }
+
+        .left_menu img {
+            padding: 10px;
+            width: 40px;
+            margin-bottom: 10px;
+        }
+        .left_menu img:hover{
+            width:50px;
+        }
+        header {
+            width: 1860px;
+            height: 500px;
+            box-sizing: border-box;
+            margin-left: 60px;
+        }
+
+        .main_menu {
+            width: 1860px;
+            height: 50px;
+            box-sizing: border-box;
+            margin-left: 60px;
+        }
+
+        section {
+            width: 1860px;
+            height: 1040px;
+            box-sizing: border-box;
+            margin-left: 60px;
+        }
+
+        header img{
+            width:1860px;
+            height:500px;
+        }
+
+        .main_menu a{
+            color:black;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            position: center;
+        }
+        .main_menu li{
+            padding: 5px;
+            font-size: 25px;
+            color:black;
+            text-decoration: none;
+            width:200px;
+            display: inline-block;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .main_menu ul{
+            text-align: center;
+        }
+        section img{
+            width:1860px;
+            height:500px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="left_menu">
+        <ul>
+            <li><a href="#" title="메인페이지 이동"><img src="/img/home.png" alt="메인페이지 이동 아이콘"></a></li>
+            <li><a href="#" title="메인페이지 이동"><img src="/img/home.png" alt="메인페이지 이동 아이콘"></a></li>
+            <li><a href="#" title="메인페이지 이동"><img src="/img/home.png" alt="메인페이지 이동 아이콘"></a></li>
+            <li><a href="#" title="메인페이지 이동"><img src="/img/home.png" alt="메인페이지 이동 아이콘"></a></li>
+            <li><a href="#" title="메인페이지 이동"><img src="/img/home.png" alt="메인페이지 이동 아이콘"></a></li>
+        </ul>
+    </nav>
+    <header></header>
+    <nav class="main_menu">
+        <ul>
+            <li><a href="#" title="HOME 페이지 이동">HOME</a></li>
+            <li><a href="#" title="제품소개 페이지 이동">COFFEE</a></li>
+            <li><a href="#" title="CF 동영상 이동">CF</a></li>
+            <li><a href="#" title="PRINT 페이지 이동">PRINT</a></li>
+            <li><a href="#" title="문의하기 페이지 이동">문의하기</a></li>
+        </ul>
+    </nav>
+    <section>
+        <ul>
+            <li><img src="/img/sub/newyork.jpg" alt=""></li>
+        </ul>
+    </section>
+    <section></section>
+    <section></section>
+    <section></section>
+</body>
+
+</html>

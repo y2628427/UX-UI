@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Google</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="/0330/css/google_layout.css">
+    <!--css파일을 읽어준다.-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a:link,
+        a:visited {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 0px;
+            display: inline-block;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        nav {
+            text-align: right;
+        }
+
+        nav ul {
+            padding: 15px;
+            display: inline-block;
+        }
+
+        nav li {
+            display: inline-block;
+            padding-left: 20px;
+            font-size: 0px;
+
+        }
+
+        a>img {
+            width: 16px;
+        }
+
+        .app {
+            padding: 16px !important;
+        }
+
+        .app:hover {
+            background-color: #a7a1a1;
+            border-radius: 32px;
+        }
+
+        .login:link,
+        .login:visited {
+            width: 96px;
+            /* height: 36px; */
+            padding: 8px 0px;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;
+            display: inline-block;
+            background-color: #4574bb;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .login:hover {
+            text-decoration: none;
+            box-shadow: 0px 0px 3px #2e86f8;
+        }
+
+
+
+        section {
+            text-align: center;
+            margin-top: 200px;
+        }
+
+
+        section input {
+            height: 44px;
+            width: 400px;
+            font-size: 20px;
+            padding-left: 50px;
+            background-image: url('/img/search.png');
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            background-size: 32px;
+            border-style: none;
+            outline: none;
+            /* 
+            탭이나 focus 효과가 들어갔을 때 표시되는 테두리 해제 
+            사용밥법 및 속성값이 border와 동일하다.
+            선두께 선종류 선색상
+            outline-width, outline-style, outline-color
+            */
+        }
+
+        form {
+            border: 1px solid gray;
+            border-radius: 22px;
+            display: inline-block;
+            padding: 0px 20px;
+        }
+
+        form>* {
+            float: left;
+        }
+
+        form a {
+            display: inline-block;
+            height: 32px;
+            padding: 8px 0px;
+            margin-left: 10px;
+
+        }
+
+        form a>img {
+            width: 32px
+        }
+
+        article div {
+            clear: both;
+            text-align: center;
+            margin-top:20px;
+        }
+
+        article button {
+            padding: 0px 20px;
+            height: 32px;
+            margin-right: 5px;
+            border: none; /* 테두리 없앰 */
+            border-radius: 5px;
+        }
+
+        footer {
+            position: absolute;
+            width:100%;
+            bottom: 0px; /* 하단에 붙임 */
+            clear: both;
+            background-color:#e8e8e8;
+            color:gray;
+        }
+        footer > p,footer > div {
+            padding:10px 20px;
+            height:32px;
+        }
+        footer ul:first-child{
+            float:left;
+            width:650px;
+        }
+        footer ul:last-child{
+            width:550px;
+            float:right;
+            text-align: right;
+        }
+        footer li{
+            display: inline-block;
+            margin-right: 50px;
+        }
+        footer a:link, footer a:visited{
+            color:gray;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" title="gmail 페이지로 이동">gmail</a></li>
+            <li><a href="#" title="이미지 검색 페이지로 이동">이미지</a></li>
+            <li><a href="#" title="Goole 앱 화면" class="app"><img src="/img/app_menu.png" alt="구글 앱 메뉴 아이콘"></a></li>
+            <li>
+                <a href="#" title="google 로그인으로 이동" class="login">로그인</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <img src="/img/googlelogo_color_272x92dp.png" alt="구글 로고 이미지">
+        <article>
+            <form action="" method="get">
+                <input type="text" placeholder="" name="search" id="search"> <!-- name이나 id 값은 동일 -->
+                <a><img src="/img/keyboard.png" alt="화상 키보드 실행 아이콘"></a>
+                <a><img src="/img/mic.png" alt="음성인식 검색 실행 아이콘"></a>
+            </form>
+            <div>
+                <button>Google검색</button>
+                <button>I'm Feeling Lucky</button>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p><span>대한민국</span></p>
+        <div>
+        <ul>
+            <li><a href="#" title="Google 정보 페이지로 이동">Google</a></li>
+            <li><a href="#" title="Google Ads 페이지로 이동">광고</a></li>
+            <li><a href="#" title="비지니스 페이지로 이동">비즈니스</a></li>
+            <li><a href="#" title="Google 정보 페이지로 이동">검색의 원리</a></li>
+        </ul>
+        <ul>
+            <li><a href="#" title="개인정보 처리방침 페이지로 이동">개인정보처리방침</a></li>
+            <li><a href="#" title="약관 페이지로 이동">약관</a></li>
+            <li><a href="#" title="설정 페이지로 이동">설정</a></li>
+        </ul>
+    </div>
+    </footer>
+</body>
+
+</html>

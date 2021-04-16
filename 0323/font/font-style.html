@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>글꼴 꾸미기</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+        /*
+        폰트 색상
+        rgb(0~255,0~255,0~255)
+        #ff0011 --> html 색상표
+        */
+        .color {
+            color: #f01;
+        }
+
+        /* 기울임꼴 : italic */
+        .italic {
+            font-style: italic;
+        }
+
+        /* 텍스트 라인 긋기 : underline, overline, line-through, none
+           줄 색깔은 글꼴 색깔로 지정됨
+         */
+        .line {
+            text-decoration: overline;
+        }
+
+        a {
+            /* 하이퍼링크 태그에 걸린 밑줄 삭제 */
+            text-decoration: none;
+        }
+
+        /* 글꼴 두껍게 */
+        .bold {
+            font-weight: bold;
+        }
+        /* 폰트 : 첫번째 메인 폰트, 서브 폰트(사용자 컴퓨터에 메인 폰트가 없을) */
+        .font{
+            /*font-family: '궁서', '바탕';*/ 
+            font-family : 'Hi Melody', cursive;
+        }
+        @font-face{
+            font-family: 'bp';
+            src: url("/0323/font/resourse/BlackAndWhitePicture-Regular.ttf");
+        }
+        @font-face{
+            font-family: 'cd';
+            src: url("/0323/font/resourse/Dokdo-Regular.ttf");
+        }
+        .new_font{
+            font-family: 'bp' ,'cd'; 
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">하이퍼링크</a>
+    <p class="line">국회는 의장 1인과 부의장 2인을 선출한다. 모든 국민은 자기의 행위가 아닌 친족의 행위로 인하여 불이익한 처우를 받지 아니한다.</p>
+
+    <p class="bold">국채를 모집하거나 예산외에 국가의 부담이 될 계약을 체결하려 할 때에는 정부는 미리 국회의 의결을 얻어야 한다.</p>
+
+    <p class="font">의원을 제명하려면 국회재적의원 3분의 2 이상의 찬성이 있어야 한다.</p>
+
+    <p class="new_font">제안된 헌법개정안은 대통령이 20일 이상의 기간 이를 공고하여야 한다.</p>
+
+    <p>대법원장과 대법관이 아닌 법관은 대법관회의의 동의를 얻어 대법원장이 임명한다.</p>
+
+
+</body>
+
+</html>

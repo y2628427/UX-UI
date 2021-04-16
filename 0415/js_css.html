@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        #back{
+            background-image: url(/img/cloud.jpg);
+            width:100px;
+            height: 100px;
+            background-size: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="pop">영역 태그</div>
+    <ul>
+        <li>A - list</li>
+        <li>B - list</li>
+        <li>C - list</li>
+        <li>D - list</li>
+    </ul>
+    <div id ="back" onmouseover="rolloverImage()"></div> <!--onmouseover :  마우스가 올라갓을때 -->
+    <script>
+        var pop = document.getElementById("pop"); //id 속성값이 pop 인 태그를 선택하겠다.
+        //alert(pop.innerHTML); // 해당태그가 가지고있는 HTML 내용을 가지고 오겠다
+        //선택된 태그에 CSS 적응하는 방법
+        pop.style.color = "#E8E8E8"; //웹에서 들어가는 데이터눈 "" 이거 붙혀서 문자열 취급해야됨 
+        // css속성이 background-color 처럼 - 가 들어가면 - 를 빼고 backgroundColor 대문자로  들어감 
+        pop.style.backgroundColor ="yellow";
+        //ul list-style-type : none으로 변경
+        var ul = document.getElementsByTagName("ul")[0];// 뒤에 배열 번호로 지정해야된다.
+        ul.style.listStyleType = "none";
+
+        function rolloverImage(){
+            var back = document.getElementById("back");
+            back.style.backgroundImage="url('/img/content_img.jpg')";
+        }
+    </script>
+</body>
+
+</html>

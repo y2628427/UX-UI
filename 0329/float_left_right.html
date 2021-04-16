@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>float/clear</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<style>
+    div {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+    }
+
+    .box1 {
+        background-color: yellow;
+    }
+
+    .box2 {
+        background-color: blue;
+    }
+
+    .box3 {
+        width: 1000px;
+        height: 300px;
+        background-color: violet;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+
+    .clear {
+        /* 겹치치않게 다음 줄로 넘어감 */
+        clear: both;
+    }
+
+    .container {
+        width: 1200px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box1 left"></div>
+        <div class="box2 right"></div>
+    </div>
+    <div class="box3 clear"></div>
+</body>
+
+</html>

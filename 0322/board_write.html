@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>게시판 글쓰기 페이지</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <!--
+        colspan="2" - 오른쪽으로 두칸짜리 테이블
+        rowspan="2" -  아래로 두칸짜리
+    -->
+    <h1>게시판 글쓰기 페이지</h1>
+    <table>
+        <tr>
+            <td>제목</td>
+            <td><input type="text" placeholder="제목을 입력하세요"></td>
+        </tr>
+        <tr>
+            <td>작성자</td>
+            <td><input type="text" placeholder="작성자를 입력하세요"></td>
+        </tr>
+            <td colspan="2">내용</td>
+        </tr>
+            <tr>
+                <td colspan="2">
+                <textarea cols="50" rows="10" placeholder="내용을 입력하세요"></textarea>
+            </td>
+        </tr>
+        
+    <tr>
+        <td>첨부파일</td>
+        <td><input type="file"></td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <hr>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"><button>글쓰기</button><button>취소</button></td>
+    </tr>
+    </table> 
+</body>
+</html>

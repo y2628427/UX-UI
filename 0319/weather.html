@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>일기 예보</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        img {
+            width: 32px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>일기 예보</h1>
+    <table>
+        <caption>지역날씨 예보</caption> <!--표 제목으로 적당함. 가운데 정렬까지해준다.-->
+        <tr>
+            <th rowspan="2">지역</th>
+            <th colspan="2">27일(목)</th>
+            <th colspan="2">28일(금)</th>
+            <th colspan="2">29일(토)</th>
+        </tr>
+        <tr>
+            <td>오전</td>
+            <td>오후</td>
+            <td>오전</td>
+            <td>오후</td>
+            <td>오전</td>
+            <td>오후</td>
+        </tr>
+        <tr>
+            <td>서울<br>경기도</br></td>
+            <!--br은 줄바꿈이다.-->
+            <td><img src="/img/sun.png"></td>
+            <td><img src="/img/sun.png"></td>
+            <td><img src="/img/sun.png"></td>
+            <td><img src="/img/rain.png"></td>
+            <td><img src="/img/rain.png"></td>
+            <td><img src="/img/rain.png"></td>
+        </tr>
+        <tr>
+            <td>제주도</td>
+            <td><img src="/img/sun.png"></td>
+            <td><img src="/img/sun.png"></td>
+            <td><img src="/img/sun.png"></td>
+            <td><img src="/img/rain.png"></td>
+            <td><img src="/img/rain.png"></td>
+            <td><img src="/img/rain.png"></td>
+        </tr>
+    </table>
+
+
+
+
+
+</body>
+
+</html>

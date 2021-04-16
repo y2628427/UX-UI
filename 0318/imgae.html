@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <!--src 이미지 파일경로(상대경로, 절대경로, 웹 주소), 
+        alt 엑박일때 뜨는 글자 내용
+    -->
+    <!--*상대경로 일때 : 현재 html 파일을 기준으로 해당 이미지까지의 경로-->
+    <img src="img/sub/newyork.jpg" alt="" width="300" height="">
+    <img src="img/airplane.jpg" alt="">
+    <img src="tree.jpg"><!--같은 폴더에 있을때는 파일명만 설정-->
+    <img src="../img/airplane.jpg" alt=""><!--.. 상위 폴더로 이동-->
+    <!--URL-->
+    <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png" alt="">
+    <img src="/0318/shop.jpg" alt=""><!--*****URL root 폴더 기준으로 경로를 잡음-->
+    <!--절대경로 일때, 실제 컴퓨터에서 파일이 있는 위치-->
+    <hr>
+    <img src="file:///C:/JUNHEE/0318/shop.jpg" alt="절대 경로로 잡은 이미지">
+</body>
+</html>

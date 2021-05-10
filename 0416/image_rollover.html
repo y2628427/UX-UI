@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        img{
+            width:200px;
+            height:200px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var img = document.getElementsByTagName("img")[0];
+            img.onmouseover = function(){
+                this.src ="/img/sub/newyork.jpg";  //자기자신을 가르킬때 this
+            }
+            img.onmouseout = function(){
+                this.src ="/img/cloud.jpg";  //자기자신을 가르킬때 this
+            }
+
+
+        }
+    </script>
+
+</head>
+<body>
+    <!-- 
+        mouseover 일 때 다른 이미지로 번경
+        onmouseout 일 때 원본 이미지로 변경
+    -->
+    <img src="/img/cloud.jpg" id = "img">
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="/resource/lib/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            console.log($(".pop p:hidden").html());//display 속성이 none일때
+            $("form input:checked").each(function (i,obj){
+                console.log($(this).val());
+            });
+            $("input").each(function (){
+                console.log($(this).val() +" - " +$(this).is(":checked"));
+            });
+            //p 태그 선택 후 화면에 :hidden 상태 정보를 log로 출력
+            $("p").each(function (i,obj){
+                console.log($(obj).html() + " - " + $(obj).is(":hidden"));
+            }); 
+        });
+    </script>
+</head>
+<body>
+    <div class="pop">
+        <p>내용1</p>
+        <p style="display:none;">내용2-none</p>
+        <p>내용3</p>
+    </div>
+    <div class="pop">
+        <p>내용1</p>
+        <p style="visibility: hidden ;">내용2-hidden</p>
+        <p>내용3</p>
+    </div>
+    <hr>
+    <form action="">
+        <input type="checkbox" value="c1">체크1<br>
+        <input type="checkbox" value="c2">체크2<br>
+        <input type="checkbox" value="c3">체크3<br>
+        <input type="radio" name="radio" value="r1"checked>라디오<br>
+        <input type="radio" name="radio" value="r2">라디오<br>
+        <input type="radio" name="radio" value="r3">라디오<br>
+    </form>
+</body>
+</html>

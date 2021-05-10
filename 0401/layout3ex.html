@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <style>
-        *{margin:0;padding:0;}
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
         /* 스크롤바 CSS 
-         
         body::-webkit-scrollbar{ 스크롤바 너비
             width:5px;  
-            height:5px;
+            height:5px;zP
         }
         body::-webkit-scrollbar-thumb{ 스크롤바 이동 막대
             background-color: teal;
@@ -21,34 +25,41 @@
             background-color: red;
             border-radius: 5px;
         } */
-        
-                /* 좌측 세로 메뉴 CSS */
-        .left_menu{
-            width:60px;
+
+        /* 좌측 세로 메뉴 CSS */
+        .left_menu {
+            width: 60px;
             height: 1040px;
             box-sizing: border-box;
             background-color: #e8e8e8;
             position: fixed;
             left: 0px;
-            top:0px;
+            top: 0px;
         }
-        .left_menu li{
-            width:100%;
-            height:40px;
+
+        .left_menu li {
+            width: 100%;
+            height: 40px;
             margin-top: 50px;
             text-align: center;
         }
-        .left_menu img{
+
+        .left_menu img {
             width: 40px;
-            transition-duration: 0.5s;  /*변화하는 시간*/
-            transition-property: all;   /* 변화 메뉴갯수*/
+            transition-duration: 0.5s;
+            /*변화하는 시간*/
+            transition-property: all;
+            /* 변화 메뉴갯수*/
         }
-        .left_menu img:hover{
-            width:50px;        /* 변화 크기*/
+
+        .left_menu img:hover {
+            width: 50px;
+            /* 변화 크기*/
 
         }
-        header{
-            width:1860px;
+
+        header {
+            width: 1860px;
             height: 500px;
             box-sizing: border-box;
             margin-left: 60px;
@@ -56,83 +67,104 @@
             background-size: 100% 100%;
             background-repeat: no-repeat;
         }
-        .main_menu{
-            width:1860px;
+
+        .main_menu {
+            width: 1860px;
             height: 50px;
             box-sizing: border-box;
             margin-left: 60px;
-           
+
         }
-        ul{
+
+        ul {
             list-style-type: none;
         }
+
         .main_menu {
             text-align: center;
         }
-        .main_menu ul{
+
+        .main_menu ul {
             display: inline-block;
         }
-        .main_menu li{
-            width:220px;
+
+        .main_menu li {
+            width: 220px;
             height: 50px;
             float: left;
         }
-        .main_menu li a:link, .main_menu li a:visited{
-            font-size:24px;
+
+        .main_menu li a:link,
+        .main_menu li a:visited {
+            font-size: 24px;
             color: black;
             text-decoration: none;
-            font-weight: bold;      /* 글자 굵기 */
-            line-height: 24px;      
+            font-weight: bold;
+            /* 글자 굵기 */
+            line-height: 24px;
             padding: 13px 0px;
             width: 100%;
             height: 100%;
             display: inline-block;
         }
-        section{
-            width:1860px;
+
+        section {
+            width: 1860px;
             height: 1040px;
             box-sizing: border-box;
             margin-left: 60px;
         }
-        .product_info{
+
+        .product_info {
             background-image: url(/img/airplane.jpg);
             background-size: 100% 100%;
             background-repeat: no-repeat;
         }
-        .product_info_detail{
-            width:500px;
+
+        .product_info_detail {
+            width: 500px;
             background-color: rgb(245, 117, 117);
-            color:white;
-            top:100px;
-            left:200px;
-            position: relative;  /* 원래 위치로 좌표를 잡는다. */
-            opacity:0.5; /* 투명화 해주는 속성 */
-            padding:30px;  /* 공간 내 여백 생성*/
-        }
-        .product_info_detail > p{
-            font-size:20px;
-        }
-        .cf_section{
-            text-align: center;
-            padding-top:98px;
-            background-color: rgb(98, 180, 180);
-        }
-        .print_section{ 
-            text-align: center;   
-        }
-        .print_section > article> h2{
-            font-size: :42px;
-            padding:70px 0px;
-        }
-        .print_section img{
-            width:400px;
-            height:600px;
-            margin-right:50px; /* 이미지 간 공간 */
-            margin-left:50px; /* 이미지 간 공간 */
+            color: white;
+            top: 100px;
+            left: 200px;
+            position: relative;
+            /* 원래 위치로 좌표를 잡는다. */
+            opacity: 0.5;
+            /* 투명화 해주는 속성 */
+            padding: 30px;
+            /* 공간 내 여백 생성*/
         }
 
+        .product_info_detail>p {
+            font-size: 20px;
+        }
+
+        .cf_section {
+            text-align: center;
+            padding-top: 98px;
+            background-color: rgb(98, 180, 180);
+        }
+
+        .print_section {
+            text-align: center;
+        }
+
+        .print_section>article>h2 {
+            font-size: :42px;
+            padding: 70px 0px;
+        }
+
+        .print_section img {
+            width: 400px;
+            height: 600px;
+            margin-right: 50px;
+            /* 이미지 간 공간 */
+            margin-left: 50px;
+            /* 이미지 간 공간 */
+        }
     </style>
 </head>
+
 <body>
     <nav class="left_menu">
         <ul>
@@ -141,15 +173,15 @@
             <li>
                 <a href="#" title="제품소개 페이지 이동">
                     <img src="/img/profile.png" alt="제품소개 페이지 이동 아이콘"></a>
-                </li>
+            </li>
             <li><a href="#" title="갤러리 페이지 이동">
-                <img src="/img/profile.png" alt="갤러리 페이지 이동 아이콘"></a>
+                    <img src="/img/profile.png" alt="갤러리 페이지 이동 아이콘"></a>
             </li>
             <li><a href="#" title="광고 페이지 이동">
-                <img src="/img/profile.png" alt="광고 페이지 이동 아이콘"></a>
+                    <img src="/img/profile.png" alt="광고 페이지 이동 아이콘"></a>
             </li>
             <li><a href="#" title="고객센터 페이지 이동">
-                <img src="/img/profile.png" alt="고객센터 페이지 이동 아이콘"></a>
+                    <img src="/img/profile.png" alt="고객센터 페이지 이동 아이콘"></a>
             </li>
         </ul>
     </nav>
@@ -163,10 +195,11 @@
             <li><a href="#" title="문의 페이지 이동">문의하기</a></li>
         </ul>
     </nav>
-    <section class="product_info"><!--섹션 안에는 아티클로 잡는다.-->
+    <section class="product_info">
+        <!--섹션 안에는 아티클로 잡는다.-->
         <article class="product_info_detail">
-               <h2>얼마나 아름다우냐?</h2>'
-               <p>폴 포그바(28, 맨체스터 유나이티드)가 부상으로 소속팀에 가장 큰 재정적 피해를 입힌 선수로 선정됐다.
+            <h2>얼마나 아름다우냐?</h2>'
+            <p>폴 포그바(28, 맨체스터 유나이티드)가 부상으로 소속팀에 가장 큰 재정적 피해를 입힌 선수로 선정됐다.
             </p>
         </article>
     </section>
@@ -178,11 +211,12 @@
         <article>
             <h2>PRINT</h2>
             <div>
-            <a href="#" title="월페이퍼 원본이미지 페이지로 이동"><img src="/img/content_img.jpg" alt="월페이퍼 이미지 1"></a>
-            <a href="#" title="월페이퍼 원본이미지 페이지로 이동"><img src="/img/content_img.jpg" alt="월페이퍼 이미지 1"></a>
-            <a href="#" title="월페이퍼 원본이미지 페이지로 이동"><img src="/img/content_img.jpg" alt="월페이퍼 이미지 1"></a>
+                <a href="#" title="월페이퍼 원본이미지 페이지로 이동"><img src="/img/content_img.jpg" alt="월페이퍼 이미지 1"></a>
+                <a href="#" title="월페이퍼 원본이미지 페이지로 이동"><img src="/img/content_img.jpg" alt="월페이퍼 이미지 1"></a>
+                <a href="#" title="월페이퍼 원본이미지 페이지로 이동"><img src="/img/content_img.jpg" alt="월페이퍼 이미지 1"></a>
             </div>
         </article>
     </section>
 </body>
+
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>반복문 연습</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="/resource/lib/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            //반복문 - 똑같은 일을 연속적으로 반복을 해야될때 사용
+            var str = "홍길동,20,서울시 마포구 노고산동." +
+                "김철수,33,서울시 강서구 등촌동."+
+                "박영수,45,경기도 수원시";
+            //.으로 데이터를 구분
+            //row.length가 데이터 건수 ---> 데이터는 총 3건
+            var row = str.split(".");
+            console.log(row);
+            var result = "";//결과 저장할 변수
+            for(i=0;i<row.length;i++){
+                result += "<figure><img src='/resource/img/messenger.png'>";
+                //각각의 인적 정보
+                console.log(row[i].split(","));
+                var content = row[i].split(",");
+                result += "<figcaption>";
+                for(j=0;j<content.length;j++){
+                    result +=  `<p>${content[j]}</p>`;
+                }
+                result += "</figcaption></figure>";
+            }
+            console.log(result);
+            $("body").html(result);
+        });
+    </script>
+    <style>
+        *{
+            margin:0;padding: 0;
+        }
+        figure{
+            width: 100%;
+            clear: both;
+            margin:30px;
+            border : 5px dashed black ;
+            display: inline-block;
+        }
+        img{
+            float: left;
+            width: 150px;
+            border: 1px solid red;
+        }
+        figcaption{
+            width: 400px;
+            border: 1px solid blue;
+            float: left;
+            font-size: 0px;
+        }
+        figcaption p{
+            font-size: 16px;
+            padding:17px 10px;
+            line-height: 16px;
+            height: 50px;
+            border : 1px solid greenyellow;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

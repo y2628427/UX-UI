@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>지도 생성하기</title>
+    <style type="text/css">
+        .customoverlay{
+            position: relative;
+            bottom: 85px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            border-bottom:2px solid #ddd;
+            float:left;
+        }
+        .customoverlay:nth-of-type(n){
+            border:0;
+            box-shadow:0px 1px 20px #888;
+        }
+        .customoverlay a{
+            display: block;
+            text-decoration: none;
+            color:#000;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            overflow:hidden;
+            background: #FFBB00 url('route.png') no-repeat right center;
+        }
+        .customoverlay .title{
+            display: block;
+            text-align: center;
+            background-color: #fff;
+            margin-right: 35px;
+            padding:10px 15px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        </style>
+
+</head>
+
+<body>
+    <!-- 지도를 표시할 div 입니다 -->
+<div id="map" style="width:100%;height:350px;"></div>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=eb20edf543cd8f923bbd6f933314e6a1&libraries=services"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(37.5406594, 126.852533), // 지도의 중심좌표
+        level: 2 // 지도의 확대 레벨
+    };
+
+// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+var map = new kakao.maps.Map(mapContainer, mapOption); 
+//주소로 좌표검색 
+var geocoder = new kakao.maps.services.Geocoder();
+//좌표검색
+geocoder.addressSearch('서울특별시 마포구 서강로 136 아비타워 2층,3층',
+function(result, status){
+    console.log(result);
+    console.log(status);
+    //좌표값 확인
+    console.log(result[0].x + " " + result[0].y );
+    //좌표 셋팅
+    var pos = new kakao.maps.LatLng(result[0].y, result[0].x);
+    map.setCenter(pos);
+    //마커 셋팅
+    var marker = new kakao.maps.Marker({
+        map : map,
+        position : pos
+    });
+    //커스텀 오버레이
+    var content = "<div class='customoverlay' id='info'>"+
+        "<a href='https://map.kakao.com/link/to/코리아IT아카데미신촌점,"
+            +result[0].y+","+result[0].x+"' target='_blank'>"
+            +"<span class='title'>코리아IT신촌점<br>길찾기</span></a></div>";
+    var customOverlay = new kakao.maps.CustomOverlay({
+        position : pos,
+        content : content,
+        yAnchor : 0.3
+    });
+    customOverlay.setMap(map);
+});
+</script>
+</body>
+</html>

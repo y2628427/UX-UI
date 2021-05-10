@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        function makeRequest() {
+            httpRequest = new XMLHttpRequest();
+
+            if (!httpRequest) {
+                alert('XMLHTTP 인스턴스를 만들 수가 없어요 ㅠㅠ');
+                return false;
+            }
+            httpRequest.onreadystatechange = alertContents;
+            httpRequest.open('GET', 'http://nam2626.dothome.co.kr/ajax_xml.php');
+            httpRequest.send();
+        }
+        function alertContents() {
+            if (httpRequest.readyState === XMLHttpRequest.DONE) {//이상없음, 응답완료
+                if (httpRequest.status === 200) { //200코드 정상적으로 받았음
+                    console.log(httpRequest.responseText);
+                    var result = httpRequest.responseText;
+                    var xmlParser = new DOMParser();
+                    var xmlDoc = xmlParser.parseFromString(result, "text/xml");
+                    allPrintXml(xmlDoc);
+                    var txt =
+                        xmlDoc.getElementsByTagName("question")[0].childNodes[0].nodeValue
+                        + "<br>" +
+                        xmlDoc.getElementsByTagName("answer")[0].childNodes[0].nodeValue;
+                    document.getElementById("view").innerHTML = txt;
+                } else {
+                    alert('request에 뭔가 문제가 있어요.');
+                }
+            }
+        }
+        function allPrintXml(xmlDoc) {
+            var root = xmlDoc.getElementsByTagName("root");
+            console.log("root의 자식 태그 개수 : " + root.childNodes.length);
+            for (i = 0; i < root.childNodes.length; i++) {
+                console.log(root.childNodes[i].nodeNam);
+                for(j=0;j<root.childNodes[i].childNodes.length;j++){
+                    console.log("   " + root.childNodes[i],childNodes[j].nodeName
+                    +" : "+root.childNodes[i].childNodes[j].childNodes[0].nodeValue
+                    );
+                }
+            }
+        }
+        //-------------------
+        function printMenu(xmlDoc){
+            var question = xmlDoc.getElementsByTagName("question");
+            var answer = xmlDoc.getElementsByTagName("answer");
+
+            for(i=0;i<question.length;i++){
+                document.getElementById("view")
+            }
+        }
+        window.onload = function () {
+
+            var btn = document.getElementById("btn");
+            btn.onclick = function () {
+                makeRequest();
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <button id="btn">버튼</button>
+    <div id="view"></div>
+</body>
+
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="/junhee/resource/lib/jquery-3.6.0.min.js"></script>
+    <script src="/junhee/resource/bxslider/js/jquery.bxslider.js"></script>
+    <link rel="stylesheet" href="/junhee/resource/bxslider/css/jquery.bxslider.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        background-color: #28262e;
+        color: #e8e8e8;
+    }
+
+    nav {
+        min-width: 1200px;
+        height: 100px;
+        border-bottom: 1px solid #e8e8e8;
+        margin-bottom: 20px;
+    }
+
+    nav div {
+        display: inline-block;
+        margin-left: 100px;
+        font-weight: bold;
+    }
+
+    #logo {
+        height: 60px;
+        font-size: 32px;
+        float: left;
+        padding: 20px 0px;
+        text-shadow: 0px 5px 5px #ffffff;
+    }
+
+    nav ul {
+        width: 800px;
+        list-style-type: none;
+        float: right;
+        margin-right: 100px;
+    }
+
+    nav ul li {
+        float: right;
+    }
+
+    nav a:link,
+    nav a:visited {
+        display: inline-block;
+        color: #e8e8e8;
+        font-size: 18px;
+        font-weight: bold;
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        padding: 30px 0px;
+        text-decoration: none;
+    }
+
+    header {
+        clear: both;
+    }
+
+    .advertising {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .view {
+        position: relative;
+    }
+
+    .advertising .view h2 {
+        position: absolute;
+        left: 50px;
+        bottom: 100px;
+        font-size: 24px;
+        color: #ffffff;
+        background: none !important;
+    }
+
+    .advertising .view p {
+        position: absolute;
+        left: 50px;
+        bottom: 70px;
+        font-size: 18px;
+        color: #ffffff;
+        background: none !important;
+    }
+
+    .vod_bar .view h3 {
+        position: absolute;
+    }
+
+    .vod_bar .view h3 {
+        position: absolute;
+        left: 50px;
+        bottom: 70px;
+        color: #ffffff;
+        background: none !important;
+    }
+
+    footer h3 {
+        padding: 20px;
+        border-top: 1px solid #e8e8e8;
+        border-bottom: 1px solid #e8e8e8;
+    }
+
+    footer p {
+        padding: 20px;
+    }
+    .bx-wrapper{
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
+</style>
+<script>
+    $(function () {
+        $(".advertising").bxSlider({
+            maxSlides: 4,
+            slideWidth: 640,
+            moveSlides: 1
+        });
+        $(".vod_bar").bxSlider({
+            maxSlides: 10,
+            slideWidth: 360,
+            moveSlides: 1
+        });
+    });
+</script>
+
+<body>
+    <nav>
+        <div id="logo">QuickMedia</div>
+        <ul>
+            <li><a href="#" id="login">로그인</a></li>
+            <li><a href="#">찜</a></li>
+            <li><a href="#">실시간 방송</a></li>
+            <li><a href="#">카테고리</a></li>
+            <li><a href="#">홈</a></li>
+        </ul>
+    </nav>
+    <header>
+        <header>
+            <div class="advertising">
+                <div class="view">
+                    <img src="/junhee/img/poster.jpg" alt="">
+                    <h2>VOD 제목</h2>
+                    <p>VOD 내용</p>
+                </div>
+                <div class="view">
+                    <img src="/junhee/img/poster.jpg" alt="">
+                    <h2>VOD 제목</h2>
+                    <p>VOD 내용</p>
+                </div>
+                <div class="view">
+                    <img src="/junhee/img/poster.jpg" alt="">
+                    <h2>VOD 제목</h2>
+                    <p>VOD 내용</p>
+                </div>
+                <div class="view">
+                    <img src="/junhee/img/poster.jpg" alt="">
+                    <h2>VOD 제목</h2>
+                    <p>VOD 내용</p>
+                </div>
+            </div>
+        </header>
+        <aside>
+            <h2>지금 핫한 VOD 목록</h2>
+            <div class="vod_bar">
+                <div class="view">
+                    <img src="/junhee/img/thumnail.jpg" alt="">
+                    <h3>VOD 제목</h3>
+                </div>
+                <div class="view">
+                    <img src="/junhee/img/thumnail.jpg" alt="">
+                    <h3>VOD 제목</h3>
+                </div>
+                <div class="view">
+                    <img src="/junhee/img/thumnail.jpg" alt="">
+                    <h3>VOD 제목</h3>
+                </div>
+                <div class="view">
+                    <img src="/junhee/img/thumnail.jpg" alt="">
+                    <h3>VOD 제목</h3>
+                </div>
+                <div class="view">
+                    <img src="/junhee/img/thumnail.jpg" alt="">
+                    <h3>VOD 제목</h3>
+                </div>
+                <div class="view">
+                    <img src="/junhee/img/thumnail.jpg" alt="">
+                    <h3>VOD 제목</h3>
+                </div>
+                <div class="view">
+                    <img src="/junhee/img/thumnail.jpg" alt="">
+                    <h3>VOD 제목</h3>
+                </div>
+                <div class="view">
+                    <img src="/junhee/img/thumnail.jpg" alt="">
+                    <h3>VOD 제목</h3>
+                </div>
+                <div class="view">
+                    <img src="/junhee/img/thumnail.jpg" alt="">
+                    <h3>VOD 제목</h3>
+                </div>
+                <div class="view">
+                    <img src="/junhee/img/thumnail.jpg" alt="">
+                    <h3>VOD 제목</h3>
+                </div>
+            </div>
+        </aside>
+        <section>
+            <h2>사용자 추천 VOD 목록</h2>
+            <article>
+                <div class="vod_bar">
+                    <div class="view">
+                        <img src="/junhee/img/section.jpg" alt="">
+                        <h3>VOD 제목</h3>
+                    </div>
+                    <div class="view">
+                        <img src="/junhee/img/section.jpg" alt="">
+                        <h3>VOD 제목</h3>
+                    </div>
+                    <div class="view">
+                        <img src="/junhee/img/section.jpg" alt="">
+                        <h3>VOD 제목</h3>
+                    </div>
+                    <div class="view">
+                        <img src="/junhee/img/section.jpg" alt="">
+                        <h3>VOD 제목</h3>
+                    </div>
+                    <div class="view">
+                        <img src="/junhee/img/section.jpg" alt="">
+                        <h3>VOD 제목</h3>
+                    </div>
+                    <div class="view">
+                        <img src="/junhee/img/section.jpg" alt="">
+                        <h3>VOD 제목</h3>
+                    </div>
+                    <div class="view">
+                        <img src="/junhee/img/section.jpg" alt="">
+                        <h3>VOD 제목</h3>
+                    </div>
+                    <div class="view">
+                        <img src="/junhee/img/section.jpg" alt="">
+                        <h3>VOD 제목</h3>
+                    </div>
+                    <div class="view">
+                        <img src="/junhee/img/section.jpg" alt="">
+                        <h3>VOD 제목</h3>
+                    </div>
+                    <div class="view">
+                        <img src="/junhee/img/section.jpg" alt="">
+                        <h3>VOD 제목</h3>
+                    </div>
+                   
+                </div>
+            </article>
+        </section>
+        <footer>
+            <h3>
+                <span>공지사항</span>
+                <span>QuickMedia 접속 불량 현상 해결 공지</span>
+            </h3>
+            <p>
+                회사명 : QuickMedia<br>
+                대표이사 : 홍길동<br>
+                사업자번호 : 000-0000-00000<br>
+                주소 : 서울시 마포구 노고산동<br>
+                고객센터 : 00-0000-0000
+            </p>
+        </footer>
+</body>
+
+</html>

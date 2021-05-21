@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="/junhee/resource/lib/jquery-3.6.0.min.js"></script>
+    <script>
+        //버튼 클릭 경고창
+        $(function () {
+            $("#btn").click(function () {
+                //jquery ajax
+                var txt = "txt=안녕하세요"; // API 서버로 보낼 데이터
+                //ajax 처리 할때 필요한 데이터 - url , data, type, success
+                $.jax({
+                    //url 서버페이지 경로까지만 작성
+                    url : "http://y2628427.dothome.co.kr/papago.php",
+                    data : txt,//서버로 보낼 데이터
+                    type : 'get',
+                    //정상적으로 수행됐을 때 서버가 리턴한 데이터를 받는 부분
+                    success:function(date){
+                        alert(date);
+
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <button id="btn">파파고 API 실행</button>
+</body>
+
+</html>

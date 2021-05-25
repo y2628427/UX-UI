@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>메인 페이지</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            border: 1px solid black;
+            width: 796px;
+            margin: 0 auto;
+        }
+
+        .header_container {
+            width:100%;
+            display: inline-block;
+        }
+
+        span {
+            color: greenyellow;
+        }
+
+        .logo {
+            float: left;
+            padding-left: 20px;
+            padding-top:8px;
+            font-size: 25px;
+            font-weight: bold;
+            text-decoration: none;
+            line-height: 25px;
+            color: black;
+        }
+
+        .btn_login {
+            width: 140px;
+            height: 44px;
+            background-color: greenyellow;
+            border: none;
+            float: right;
+            border-radius: 10px;
+        }
+
+        .login {
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+        section{
+            border: 1px solid black;
+            width:796px;
+            margin:0 auto;
+            padding-top:20px;
+        }
+        section input{
+            height:40px;
+            font-size: 23px;
+            background-image: url('/junhee/img/zoom.svg');
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: 28px;
+            border-style: none;
+            outline: none;
+        }
+        form{
+            border: 2px solid yellowgreen;
+            border-radius: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header_container">
+            <a href="#" title="메인 홈페이지로 이동" class="logo"><span>QT</span>.COM</a>
+            <button class="btn_login"><a href="#" title="로그인 페이지로 이동" class="login">로그인</a></button>
+        </div>
+    </header>
+    <section>
+        <form action="" method="get">
+            <input type="text" name="search" id="search" placeholder="여행지를 검색해보세요.">
+        </form>
+    </section>
+</body>
+
+</html>

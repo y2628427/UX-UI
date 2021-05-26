@@ -6,15 +6,31 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>메인 페이지</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel="stylesheet" href="./resource/css/style.css">
+    
 </head>
 
 <body>
     <header>
-        <div>
-            <span>QT.COM</span>
-            <button>로그인</button>
+        <div class="header_container">
+            <a href="#" title="메인 홈페이지로 이동" class="logo"><span>QT</span>.COM</a>
+            <!-- <button class="btn_login"><a href="#" title="로그인 페이지로 이동" class="login">로그인</a></button> -->
+            <a href="#" class="btn_login">로그인</a>
         </div>
     </header>
+    <section>
+        <form action="" method="get">
+            <input type="text" name="search" id="search" placeholder="여행지를 검색해보세요.">
+        </form>
+    </section>
+    <nav>
+        <ul>
+            <li><a href="#" title="여행지 추천받기 페이지 이동">여행지 추천 받기</a></li>
+            <li><a href="#" title="이달의 인기여행지 페이지 이동">이달의 인기 여행지</a></li>
+            <li><a href="#" title="국가별 인기 여행지">국가별 인기 여행지</a></li>
+        </ul>
+    </nav>
 </body>
 
 </html>

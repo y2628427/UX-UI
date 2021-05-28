@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="/junhee/resource/lib/jquery-3.6.0.min.js"></script>
+    <script>
+        /*
+      TV 클래스
+        - 변수 : 채널, 음량, 전원
+        - 함수 : 채널Up,채널Down, 음량Up,음량Down
+                전원OnOff     
+        - 생성자 : 채널 초기값 24, 음량 5, 전원 true
+    */
+        class TV {
+            #ch; //필드 선언 ---> private field
+            #vol;
+            #power;
+            constructor() {
+                this.#ch = 24;
+                this.#vol = 5;
+                this.#power = true;
+                console.log(this.#ch);
+            }
+            //채널을 값을 올리는 함수 작성 - 마지막 채널 777에서 올리면 맨처음 채널로 이동 (첫번째 채널 값 1)
+            chanelUp() {
+                if (this.#ch < 777)
+                    this.#ch++;
+                else
+                    this.#ch = 1;
+                console.log("현재 채널 : " + this.#ch);
+            }
+            //채널 값을 내리는 함수 작성
+            chanelDown() {
+                if (this.#ch > 1)
+                    this.#ch--;
+                else
+                    this.#ch = 777;
+                console.log("현재 채널 : " + this.#ch);
+            }
+            //음량 최소값 0, 음량 최대값 50
+            volUp() {
+                if (this.#vol < 50)
+                    this.#vol++;
+                console.log("현재 음량 : " + this.#vol);
+            }
+            volDown() {
+                if (this.#vol > 0)
+                    this.#vol--;
+                console.log("현재 음량 : " + this.#vol);
+            }
+            powerOnOff() {
+                this.#power = !this.#power;
+                if (this.#power)
+                    console.log("TV 전원 On");
+                else
+                    console.log("TV 전원 Off");
+                return this.#power;
+            }
+            //setter getter를 반드시 작성할 필요는 없음
+            //필드값을 외부로부터 받아오거나 반출할때는 필요
+            getCh() {//외부로 필드값을 반출할때
+                return this.#ch;
+            }
+            setCh(ch) {//외부로부터 값을 받아올때
+                if (ch > 0 && ch < 778)
+                    this.#ch = ch;
+            }
+            getVol() {
+                return this.#vol;
+            }
+            setVol(vol) {
+                if (vol >= 0 && vol <= 50)
+                    this.#vol = vol;
+            }
+            getPower() {
+                return this.#power;
+            }
+        }
+
+        $(function () {
+            var tv = new TV();
+            $("#ch").val(tv.getCh());
+            $("#vol").val(tv.getVol());
+
+            //채널 제어 - 채널UP/Down 버튼에 대한 이벤트 처리
+            $("#btn_ch_down").click(function () {
+                tv.chanelDown();
+                $("#ch").val(tv.getCh());
+            });
+            $("#btn_ch_up").click(function () {
+                tv.chanelUp();
+                $("#ch").val(tv.getCh());
+            });
+            //음량 제어
+            $("#btn_vol_down").on("click keypress", function () {
+                tv.volDown();
+                $("#vol").val(tv.getVol());
+            });
+
+            $("#btn_vol_up").on("click keypress", function () {
+                tv.volUp();
+                $("#vol").val(tv.getVol());
+            });
+            //전원 제어
+            $("#btn_power").on("click keyup", function () {
+                var status = tv.powerOnOff();
+                if (status)
+                    $("button").removeAttr("disabled");
+                else
+                    $("button").attr("disabled", "");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <button id="btn_ch_down">채널Down</button>
+        <input type="text" id="ch" readonly>
+        <button id="btn_ch_up">채널Up</button>
+    </div>
+    <div>
+        <button id="btn_vol_down">음량Down</button>
+        <input type="text" id="vol" readonly>
+        <button id="btn_vol_up">음량Up</button>
+    </div>
+    <div>
+        <button id="btn_power">전원</button> <span id="powerStatus"></span>
+    </div>
+</body>
+
+</html>

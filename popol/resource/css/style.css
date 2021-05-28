@@ -59,7 +59,7 @@ section input {
     width: 750px;
     height: 40px;
     font-size: 18px;
-    background-image: url('/junhee/img/zoom.svg');
+    background-image: url('/popol/resource/imgs/zoom.svg');
     background-repeat: no-repeat;
     background-position: right center;
     background-size: 28px;
@@ -109,7 +109,7 @@ nav > ul > li > a:active{
 }
 .first_menu{
     border:1px solid black;
-    background-image: url('/junhee/popol/resource/imgs/first.png');
+    background-image: url('/popol/resource/imgs/first.png');
     background-repeat: no-repeat;
     background-size: 100%;
     height: 180px;
@@ -144,4 +144,24 @@ section > article > a{
     text-align: center;
     font-weight: bold;
     font-size:20px;
+}
+.main_container{
+    width:796px;
+    height:269px;
+    margin:0 auto;
+}
+ .main_container > ul > li > img{
+    width:100%;
+    height:150px;
+    border-radius: 10px;
+}
+.sub_container{
+    width:796px;
+    height:173px;
+    margin:0 auto;
+}
+ .sub_container > ul > li > img{
+    width:100%;
+    height:108px;
+    border-radius: 10px;
 }

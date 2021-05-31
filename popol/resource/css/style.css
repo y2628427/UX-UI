@@ -146,22 +146,19 @@ section > article > a{
     font-size:20px;
 }
 .main_container{
+    border:1px solid black;
     width:796px;
     height:269px;
     margin:0 auto;
 }
- .main_container > ul > li > img{
-    width:100%;
-    height:150px;
-    border-radius: 10px;
+.main_container > .slider {
+    width:220px;
+    height: 150px;
 }
+
 .sub_container{
+    border:1px solid black;
     width:796px;
     height:173px;
     margin:0 auto;
-}
- .sub_container > ul > li > img{
-    width:100%;
-    height:108px;
-    border-radius: 10px;
 }

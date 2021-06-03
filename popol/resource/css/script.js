@@ -1,3 +1,4 @@
+
 $(function () {
     $(".slider_1").bxSlider({
         maxSlides: 3,

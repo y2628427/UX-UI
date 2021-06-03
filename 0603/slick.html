@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>slick test</title>
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="http://kenwheeler.github.io/slick/slick/slick-theme.css" />
+    <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://kenwheeler.github.io/slick/slick/slick.min.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .slick-items {
+        margin: 0 auto;
+        border: 1px solid black;
+        height: 500px;
+    }
+
+    div img {
+        width: 200px;
+        height: 100px;
+        border-radius: 20px;
+    }
+</style>
+
+<body>
+    <div class="center">
+        <div><img src="/popol/resource/imgs/busan.jpg" alt=""></div>
+        <div><img src="/popol/resource/imgs/seoul.jpg" alt=""></div>
+        <div><img src="/popol/resource/imgs/newyork.jpg" alt=""></div>
+        <div><img src="/popol/resource/imgs/ltaly.jpg" alt=""></div>
+    </div>
+</body>
+<script type="text/javascript">
+    $('.center').slick({
+  centerMode: true,
+  centerPadding: '20px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 500,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '20px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 400,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '20px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+</script>
+
+</html>

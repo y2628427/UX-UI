@@ -208,9 +208,5 @@ div > .slider_1 > div > a > img {
 .slider_2{
     width:100%;
 }
-.sub_container  p{
-    position: absolute;
-    left: 10px;
-    bottom: 80px;
-    font-size: 16px;
+.sub_container   p{
 }

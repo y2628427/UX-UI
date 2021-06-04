@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>회원가입 페이지</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        margin: 0 auto;
+        border: 2px solid #d8d8d8;
+        border-radius: 15px;
+        width: 472px;
+        height: 780px;
+        margin-top: 30px;
+    }
+
+    a > img {
+        float: right;
+        padding: 20px;
+        margin-right: 5px;
+        width:40px;
+    }
+
+    p {
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 36px;
+        margin-left: 60px;
+        margin-bottom: 40px;
+    }
+
+    span {
+        color: greenyellow
+    }
+
+    ul {
+        width: 352px;
+        margin: 0 auto;
+    }
+
+    ul li {
+        font-size: 20px;
+        color: #b8b8b8;
+        display: inline-block;
+        padding: 5px;
+    }
+
+    input {
+        width: 337px;
+        height: 58px;
+        border: 2px solid #d8d8d8;
+        border-radius: 5px;
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+    .input {
+        padding-bottom: 20px;
+    }
+    .bir{
+        width:361px;
+    }
+    .birth{
+        width:160px;
+        height: 58px;
+    }
+    span button{
+        border:2px solid black; 
+        width:66px;
+        height: 60px;
+        font-size: 20px;
+        border:none;
+        background-color: #e8e8e8;
+        color:#adadad;
+        border-radius: 5px;
+        margin-left: 10px;
+        
+    }
+    a {
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+    }
+    .btn1{
+        margin-left: 5px;
+        margin-top: 20px;
+        width: 351px;
+        height: 58px;
+        border:none;
+        background-color: greenyellow;
+        border-radius: 5px;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <a href="main_page.html"><img src="/popol/resource/imgs/close.svg" alt=""></a>
+        <p><span>QT.</span>COM</p>
+        <ul>
+            <div class="input">
+                <li>아이디</li>
+                <li><input type="text" placeholder="이메일을 입력해주세요.">
+                </li>
+                <li>비밀번호</li>
+                <li><input type="text" placeholder="영문 대/소문자,숫자,특수기호 조합">
+                </li>
+                <li>비밀번호 확인</li>
+                <li><input type="text" placeholder="비밀번호를 한번 더 입력해주세요.">
+                </li>
+                <li>이름</li>
+                <li><input type="text" placeholder="이름을 입력해주세요.">
+                </li>
+                <li class="bir">생년월일</li>
+                <li><input type="text" class="birth" placeholder="8자리 입력">
+                    <span>
+                        <button>남</button>
+                        <button>여</button>
+                    </span>
+                </li>
+                <button class="btn1"><a href="login.html">회원가입 완료</a></button>
+            </div>
+        </ul>
+    </div>
+
+</body>
+
+</html>

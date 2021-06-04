@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>로그인 페이지</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <style>
@@ -13,50 +13,87 @@
         padding: 0;
     }
 
-    div {
+    .container {
         margin: 0 auto;
-        border: 1px solid black;
+        border: 2px solid #d8d8d8;
+        border-radius: 15px;
         width: 472px;
-        height: 781px;
+        height: 780px;
+        margin-top: 30px;
     }
 
-    .close {
+    a > img {
         float: right;
-        padding: 10px;
-        margin-right: 10px;
-        color: black;
-        font-size: 40px;
-        text-decoration: none;
+        padding: 20px;
+        margin-right: 5px;
+        width:40px;
     }
 
     p {
         font-size: 48px;
         font-weight: bold;
         text-align: center;
-        padding: 128px;
+        padding: 120px;
     }
 
     span {
         color: greenyellow
     }
-    ul{
-        
+
+    ul {
+        width: 352px;
+        margin: 0 auto;
+    }
+
+    ul li {
+        font-size: 20px;
+        color: #b8b8b8;
+        display: inline-block;
+        padding: 8px;
+    }
+
+    input {
+        width: 337px;
+        height: 58px;
+        border: 2px solid #d8d8d8;
+        border-radius: 5px;
+        font-size: 20px;
+        padding-left: 10px;
+    }
+    .input{
+        padding-bottom: 20px;
+    }
+
+    li button {
+        width: 352px;
+        height: 58px;
+        background-color: greenyellow;
+        border-radius: 5px;
+        border: none;
+    }
+
+    a {
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
     }
 </style>
 
 <body>
     <div class="container">
-        <a href="main_page.html" class="close">←</a>
+        <a href="main_page.html" class="close"><img src="/popol/resource/imgs/close.svg" alt=""></a>
         <p><span>QT.</span>COM</p>
         <ul>
-            <li>아이디</li>
-            <li><input type="text" placeholder="이메일을 입력해주세요.">
-            </li>
-            <li>비밀번호</li>
-            <li><input type="text" placeholder="비밀번호를 입력해주세요.">
-            </li>
-            <button><a href="#">로그인</a></button>
-            <button><a href="#">회원가입</a></button>
+            <div class="input">
+                <li>아이디</li>
+                <li><input type="text" placeholder="이메일을 입력해주세요.">
+                </li>
+                <li>비밀번호</li>
+                <li><input type="text" placeholder="비밀번호를 입력해주세요.">
+                </li>
+            </div>
+            <li><button><a href="#">로그인</a></button></li>
+            <li><button><a href="join.html">회원가입</a></button></li>
         </ul>
     </div>
 

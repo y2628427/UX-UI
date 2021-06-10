@@ -161,37 +161,9 @@
             margin-right: 50px;
             border: 3px solid white;
         }
-
-        .main_container {
-            margin: 0 auto;
-            border: 1px solid black;
-            width: 797px;
-            height: 359px;
-        }
-
-        a img {
-            border-radius: 10px;
-        }
-
-        .new_1 {
-            width: 380px;
-            height: 312px;
-        }
-
-        .new_2 {
-            width: 384px;
-            height: 160px;
-        }
-
-        .new_3 {
-            width: 190px;
-            height: 145px;
-            float: right;
-            padding:5px;
-        }
-
-        .new_2,
-        .new_3 {
+        .main_container{
+            width:796px;   
+            height: 379px;
         }
     </style>
 </head>
@@ -211,21 +183,25 @@
     <nav>
         <ul>
             <li><a href="#" title="여행지 추천받기 페이지 이동">여행지 추천 받기</a></li>
-            <li><a href="#" title="이달의 인기여행지 페이지 이동" class="bold">이달의 인기 여행지</a></li>
-            <li><a href="#" title="국가별 인기 여행지">국가별 인기 여행지</a></li>
+            <li><a href="#" title="이달의 인기여행지 페이지 이동">이달의 인기 여행지</a></li>
+            <li><a href="#" title="국가별 인기 여행지" class="bold">국가별 인기 여행지</a></li>
         </ul>
     </nav>
     <section>
 
     </section>
     <div class="main_container">
-        <h3>이달의 여행지 - 뉴욕</h3>
-        <div>
-            <a href="#" title="확대된 이미지로 이동"><img src="/popol/resource/imgs/newyork1.jpg" alt="" class="new_1"></a>
-            <a href="#" title="확대된 이미지로 이동"><img src="/popol/resource/imgs/newyork2.jpg" alt="" class="new_2"></a>
-            <a href="#" title="확대된 이미지로 이동"><img src="/popol/resource/imgs/newyork3.jpg" alt="" class="new_3"></a>
-            <a href="#" title="확대된 이미지로 이동"><img src="/popol/resource/imgs/newyork4.jpg" alt="" class="new_3"></a>
-        </div>
+        <div id="map" style="width:700px;height:350px;"></div>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	f65d7938d0f7420c5762f8b1c663166f"></script>
+        <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = { 
+                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                level: 1 // 지도의 확대 레벨
+            };
+        // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+        var map = new kakao.maps.Map(mapContainer, mapOption); 
+    </script>
     </div>
     <div class="sub_container">
 

@@ -9,7 +9,7 @@
     <link rel='stylesheet' type='text/css' href='/resource/bxslider/css/jquery.bxslider.css'>
     <script src="/resource/lib/jquery-3.6.0.min.js"></script>
     <script src="/resource/bxslider/js/jquery.bxslider.js"></script>
-    <script src="/popol/resource/css/script.js"></script>
+    <script src="/resource/css/script.js"></script>
     <style>
         * {
             margin: 0;
@@ -73,7 +73,7 @@
             width: 750px;
             height: 40px;
             font-size: 18px;
-            background-image: url('/popol/resource/imgs/zoom.svg');
+            background-image: url('/resource/imgs/zoom.svg');
             background-repeat: no-repeat;
             background-position: right center;
             background-size: 28px;
@@ -161,9 +161,46 @@
             margin-right: 50px;
             border: 3px solid white;
         }
-        .main_container{
-            width:796px;   
+
+        .main_container {
+            width: 796px;
             height: 379px;
+            margin: 0 auto;
+        }
+
+        .sub_container {
+            width: 796px;
+            height: 216px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .sub_container>h3 {
+            float: left;
+            width: 60px;
+            padding: 20px;
+            padding-top: 40px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .sub_container img {
+            width: 240px;
+            height: 140px;
+            border-radius: 20px;
+            padding: 12px;
+        }
+
+        .sub_container a {
+            float: left;
+            margin-top: 20px;
+        }
+        div a p{
+            text-align: left;
+            margin: -145px 22px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -191,19 +228,41 @@
 
     </section>
     <div class="main_container">
-        <div id="map" style="width:700px;height:350px;"></div>
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	f65d7938d0f7420c5762f8b1c663166f"></script>
+        <div id="map" style="width:796px;height:379px;"></div>
+        <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	f65d7938d0f7420c5762f8b1c663166f"></script>
         <script>
-        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-            mapOption = { 
-                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-                level: 1 // 지도의 확대 레벨
-            };
-        // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-        var map = new kakao.maps.Map(mapContainer, mapOption); 
-    </script>
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                mapOption = {
+                    center: new kakao.maps.LatLng(37, 126.47), // 지도의 중심좌표
+                    level: 15 // 지도의 확대 레벨
+                };
+            // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+            var map = new kakao.maps.Map(mapContainer, mapOption);
+        </script>
     </div>
     <div class="sub_container">
+        <h2>대한민국 인기 여행지 TOP3</h2>
+        <div class="">
+            <div>
+                <a href="#" title="확대된 이미지로 이동">
+                    <img src="/popol/resource/imgs/seoul.jpg">
+                    <p>서울</p>
+                </a>
+            </div>
+            <div>
+                <a href="#" title="확대된 이미지로 이동">
+                    <img src="/popol/resource/imgs/busan.jpg">
+                    <p>부산</p>
+                </a>
+            </div>
+            <div>
+                <a href="#" title="확대된 이미지로 이동">
+                    <img src="/popol/resource/imgs/gang.jpg">
+                    <p>강릉</p>
+                </a>
+            </div>
+        </div>
 
     </div>
 </body>
